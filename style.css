@@ -26,6 +26,20 @@ h2 {
     font-weight: normal;
 }
 
+a {
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
 #logo {
     color: #fff;
     font-weight: 100;
@@ -36,9 +50,19 @@ h2 {
     margin: auto;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 #balance {
     margin-top: -8rem;
-
 }
 
 #balance h2{
@@ -57,6 +81,10 @@ h2 {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
