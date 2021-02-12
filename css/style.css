@@ -32,7 +32,7 @@ header {
 
 header::before {
     content: '';
-    background-image: url('https://www.downloadclipart.net/large/abstract-lines-png-pic.png');
+    background-image: url('../img/background-abstract.png');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -165,14 +165,7 @@ table thead th {
 }
 
 table tbody tr {
-    opacity: 0;
-    transform: translate3d(-50px, 0, 0);
-    transition: .8s;
-}
-
-tr.animate-table {
     opacity: 0.7;
-    transform: translate3d(0, 0, 0);
 }
 
 table tbody tr:hover {
@@ -222,7 +215,7 @@ td.date {
 }
 
 .modal {
-    background: #f0f2f5;
+    background: #5c7396;
     padding: 2.4rem;
 
     position: relative;
