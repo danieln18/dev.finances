@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dev.finance$</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
     <header class="header-animation">
-        <!-- <img src="./assets/logo.svg" alt="Logo Dev Finances"> -->
         <h1>Dev.finance$</h1>
     </header>
 
@@ -23,8 +24,18 @@
 
             <div class="card">
                 <h3>
-                   <span>Entradas</span>
-                    <img src="./assets/income.svg" alt="imagem de entradas">
+                    <span>Entradas</span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 2.66666C8.63621 2.66666 2.66668 8.6362 2.66668 16C2.66668 23.3638 8.63622 29.3333 16 29.3333C23.3638 29.3333 29.3333 23.3638 29.3333 16C29.3333 8.6362 23.3638 2.66666 16 2.66666Z"
+                            stroke="#12A454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <g class="seta-income">
+                            <path d="M21.3333 16L16 10.6667L10.6667 16" stroke="#12A454" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 21.3333L16 10.6667" stroke="#12A454" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
                 </h3>
                 <p>R$ 5.000,00</p>
             </div>
@@ -32,22 +43,38 @@
             <div class="card">
                 <h3>
                     <span>Saída</span>
-                    <img src="./assets/expense.svg" alt="imagem de saidas">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 29.3333C23.3638 29.3333 29.3333 23.3638 29.3333 16C29.3333 8.63621 23.3638 2.66668 16 2.66667C8.63622 2.66667 2.66669 8.63621 2.66668 16C2.66668 23.3638 8.63622 29.3333 16 29.3333Z"
+                            stroke="#E83F5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <g class="seta-expensive">
+                            <path d="M10.6667 16L16 21.3333L21.3334 16" stroke="#E83F5B" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10.6667L16 21.3333" stroke="#E83F5B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
                 </h3>
                 <p>R$ 2.000,00</p>
 
             </div>
-
             <div class="card total">
                 <h3>
                     <span>
                         Total
                     </span>
-                    <img src="./assets/total.svg" alt="imagem de total">
+                    <svg id="total-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 1.33333V30.6667" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M22.6667 6.66667H12.6667C11.429 6.66667 10.242 7.15834 9.36684 8.03351C8.49167 8.90868 8 10.0957 8 11.3333C8 12.571 8.49167 13.758 9.36684 14.6332C10.242 15.5083 11.429 16 12.6667 16H19.3333C20.571 16 21.758 16.4917 22.6332 17.3668C23.5083 18.242 24 19.429 24 20.6667C24 21.9043 23.5083 23.0913 22.6332 23.9665C21.758 24.8417 20.571 25.3333 19.3333 25.3333H8"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </h3>
                 <p>R$ 7.000,00</p>
             </div>
-
         </section>
 
         <section id="transaction">
@@ -177,36 +204,38 @@
                     <form action="">
 
                         <div class="input-group">
-                            <label 
-                            class="sr-only" for="description">Descrição</label>
-                        
-                        <input 
-                            type="text" 
-                            id="description" 
-                            name="description" placeholder="Descrição">
+                            <label for="despesa">
+                                <input class="choice-radio" type="radio" name="choice" id="despesa">Despesa
+                            </label>
+                            <label for="receita">
+                                <input class="choice-radio" type="radio" name="choice" id="receita">Receita
+                            </label>
                         </div>
 
                         <div class="input-group">
-                            <label 
-                            class="sr-only" for="description">Valor</label>
-                        
-                        <input 
-                            type="number"
-                            step="0.01" 
-                            id="amount" 
-                            name="amount" placeholder="0,00">
-                            
-                        <small class="help">Use o sinal "-"" (negativo) para despesas e "," para casa decimais</small>
+                            <label class="sr-only" for="description">Descrição</label>
+
+                            <input type="text" id="description" name="description" placeholder="Descrição">
                         </div>
 
                         <div class="input-group">
-                            <label 
-                            class="sr-only" for="date">Descrição</label>
-                        
-                        <input 
-                            type="date" 
-                            id="date" 
-                            name="date" placeholder="Descrição">
+                            <label class="sr-only" for="amount">Valor</label>
+
+                            <div>
+                                <span class="positive-value">R$</span>
+                                <span class="negative-value">- R$</span>
+                            </div>
+
+                            <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00">
+
+                            <small class="help">Use o sinal "-"" (negativo) para despesas e "," para casa
+                                decimais</small>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="sr-only" for="date">Descrição</label>
+
+                            <input type="date" id="date" name="date" placeholder="Descrição">
                         </div>
 
                         <div class="input-group actions">
@@ -219,12 +248,12 @@
         </div>
     </div>
 
-    
+
     <footer>
         <p>dev.finance$</p>
     </footer>
 
-    <script src="./javascript.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

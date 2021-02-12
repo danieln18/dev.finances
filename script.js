@@ -15,7 +15,22 @@ const Modal = {
     }
 }
 
-const target = document.querySelectorAll('.left-animation');
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+const target = document.querySelectorAll('tr');
 const animationClass = 'animate-table';
 
 function animeScroll() {
@@ -31,9 +46,9 @@ function animeScroll() {
 
 if(target.length) {
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', debounce(function() {
     animeScroll();
-    console.log('kaskdasl')
-})
+    console.log('sdjfsdk');
+}), 500);
 
 }
