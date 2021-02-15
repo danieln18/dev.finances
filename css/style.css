@@ -14,6 +14,7 @@
 
 html {
     font-size: 93.75%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,23 +24,28 @@ body {
 
 header {
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(2,1,18,1) 100%);
-
     padding: 4rem 0 15rem;
     text-align: center;
+
     position: relative;
     z-index: -1;
 }
 
 header::before {
     content: '';
-    background-image: url('../img/background-abstract.png');
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.mo-di.co.za%2Fwp-content%2Fuploads%2F2014%2F11%2F1408610763_3450081.png&f=1&nofb=1');
     background-size: cover;
+    filter: brightness(600%);
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.035;
+    opacity: 0.070;
+}
+
+h1 strong {
+    font-weight: 400;
 }
 
 h1 {
@@ -172,6 +178,10 @@ table tbody tr:hover {
     opacity: 1;
 }
 
+table tbody tr img {
+    cursor: pointer;
+}
+
 table td {
     background: #fff;
 
@@ -215,11 +225,9 @@ td.date {
 }
 
 .modal {
-    background: #5c7396;
+    background: #f0f2f5;
     padding: 2.4rem;
-
     position: relative;
-
 }
 
 .active {
@@ -263,10 +271,6 @@ input {
     width: 48%;
 }
 
-.choice-radio {
-    width: 25px;
-}
-
 .button.cancel {
     width: 100%;
     height: 50px;
@@ -306,7 +310,7 @@ button:hover{
 
 footer {
     text-align: center;
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 4rem;
     color: var(--dark-blue);
     opacity: 0.6;
 }
