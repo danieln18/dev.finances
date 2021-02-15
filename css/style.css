@@ -33,7 +33,7 @@ header {
 
 header::before {
     content: '';
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.mo-di.co.za%2Fwp-content%2Fuploads%2F2014%2F11%2F1408610763_3450081.png&f=1&nofb=1');
+    background-image: url('../img/background-abstract2.png');
     background-size: cover;
     filter: brightness(600%);
     position: absolute;
@@ -104,8 +104,7 @@ a:hover {
     margin-top: 0;
 }
 
-.card {
-
+.card {    
     background: #fff;
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
